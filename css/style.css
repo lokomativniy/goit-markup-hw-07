@@ -77,24 +77,22 @@ ul {
   margin-right: 93px;
 }
 
-.studio {
+.logo__studio {
   display: inline-block;
   color: var(--logo-color);
 }
 
-.navigation {
+.site-nav__navigation {
   display: flex;
 }
-.navigation-item:not(:last-child) {
+.site-nav__item:not(:last-child) {
   margin-right: 50px;
 }
 .contacts:not(:last-child) {
   margin-right: 50px;
 }
-.navigation-item {
-  
-}
-.navigation-link {
+
+.site-nav__link {
   color: var(--primary-text-color);
   text-decoration: none;
   display: block;
@@ -105,12 +103,11 @@ ul {
   letter-spacing: 0.02em;
   transition: color 250ms var(--timing-function);
 }
-.current {
+.site-nav__link--current {
   color: var(--accent-color);
   position: relative;
-
 }
-.current::after{
+.site-nav__link--current::after{
   position: absolute;
   content: "";
   left: 0;
@@ -120,12 +117,12 @@ ul {
   background: #2196F3;
   border-radius: 2px;
 }
-.navigation-link:hover,.navigation-link:focus,.contacts-link:hover .contacts-icon,.contacts-link:focus .contacts-icon{
+.site-nav__link:hover,.site-nav__link:focus,.contacts__link:hover .contacts__icon,.contacts__link:focus .contacts__icon{
   fill:var(--accent-color);
   color: var(--accent-color);
 }
 
-.contacts-link:hover,.contacts-link:focus{
+.contacts__link:hover,.contacts__link:focus{
   color: var(--accent-color);
 }
 
@@ -133,14 +130,14 @@ ul {
   display: flex;
   align-items: center;
 }
-.contacts-item {
+.contacts__item {
   display: flex
 }
-.contacts-item:not(:last-child){
+.contacts__item:not(:last-child){
   margin-right: var(--card-interval);
 }
 
-.contacts-link{
+.contacts__link{
   display: flex;
   color: var(--text-color);
   text-decoration: none;
@@ -151,7 +148,7 @@ ul {
   padding-bottom: 20px;
   transition: color 250ms var(--timing-function);
 }
-.contacts-icon{
+.contacts__icon{
   margin-right: 10px;
   fill: var(--text-color);
   transition: fill 250ms var(--timing-function);
@@ -159,7 +156,7 @@ ul {
 
 
 /* main index.html */
-.section-hero {
+.hero {
   background: var(--background-color);
   padding: 200px 0;
   text-align: center;
@@ -171,7 +168,7 @@ ul {
   background-image:linear-gradient(to right, rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url(../images/background.css/background\ img.jpg);
 }
 
-.title-hero {
+.hero__title {
   color: var(--primary-white-color);
   font-size: 44px;
   font-weight: 900;
@@ -180,7 +177,7 @@ ul {
   text-align: center;
   margin-bottom: 30px;
 }
-.btn {
+.hero__btn {
   color: var(--primary-white-color);
   background: var(--accent-color);
   display: inline-flex;
@@ -193,9 +190,12 @@ ul {
   border: 0;
   padding: 10px 32px;
   transition: background-color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
-  
 }
-.btn-close{
+.hero__btn:hover, .hero__btn:focus{
+  background-color: #188ce8; 
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+.modal__btn-close{
   position: absolute;
   display: flex;
   justify-content: center;
@@ -209,17 +209,14 @@ ul {
   background: #FFFFFF;
   border-radius: 50%;
 }
-.btn-icon{
+.modal__btn-icon{
   fill:#000000;
   transition: fill 250ms var(--timing-function)
 }
-.btn-close:hover .btn-icon,.btn-close:hover .btn-icon{
+.modal__btn-close:hover .modal__btn-icon,.modal__btn-close:hover .modal__btn-icon{
   fill:var(--accent-color)
 }
-.btn:hover, .btn:focus{
-  background-color: #188ce8; 
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
+
 .backdrop{
   position: fixed;
   top: 0;
