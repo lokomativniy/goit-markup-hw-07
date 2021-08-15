@@ -1,0 +1,193 @@
+.hero {
+  background: $background-color;
+  padding: 200px 0;
+  text-align: center;
+  height:600px;
+  max-width: 1600px;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+  background-image:linear-gradient(to right, rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url(../images/background.css/background\img.jpg);
+  &__title {
+  color: $primary-white-color;
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-align: center;
+  margin-bottom: 30px;
+}
+}
+.btn {
+  color: $primary-white-color;
+  background: $accent-color;
+  display: inline-flex;
+  font-size: 16px;
+  line-height: 1.88;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 0;
+  padding: 10px 32px;
+  transition: background-color 250ms $timing-function, box-shadow 250ms $timing-function;
+  &:hover, &:focus{
+  background-color: #188ce8; 
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+}
+
+.features {
+  display: flex;
+
+  &__item:not(:last-child) {
+  margin-right: $card-interval;
+}
+  &__box{
+  display: flex;
+  margin-bottom:$card-interval;
+  background: $grey-color;
+  align-items: center;
+  padding: 25px 100px;
+  border-radius: 4px;
+}
+  &__title {
+  font-weight: 700;
+  line-height: 1.14;
+  font-size: 14px;
+  margin-bottom: 10px; 
+}
+  &__text {
+  color: $text-color;
+  line-height: 1.71;
+}
+}
+
+.images {
+  display: flex;
+  justify-content: space-between;
+
+  &__item{
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+  &__title{
+  display: block;
+  bottom: 0;
+  padding: 27px 0;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14;
+}
+  &__thumb{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(47, 48, 58, 0.8);
+  text-align: center;
+}
+}
+
+.section-team {
+  background: $grey-color;
+}
+.team {
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+  background: $primary-white-color;
+  box-shadow: $card-shadow;
+  border-radius: 0px 0px 4px 4px;
+  text-align: center;
+}
+}
+.team-member{
+  &__stand {
+  padding: 30px 0;
+}
+  &__name {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.19;
+  margin-bottom: 10px;
+}
+  &__position {
+  color: $text-color;
+  font-size: 16px;
+  line-height: 1.19;
+  margin-bottom: 16px;
+}
+}
+
+.social{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__item:not(:last-child){
+  margin-right: 10px;}
+
+  &__links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 44px;
+  background: #FFFFFF;
+  height: 44px;
+  border-radius: 50%;
+  border: 0;
+  padding: 0;
+  transition: background-color 250ms $timing-function;
+}
+  &__links:hover,&__links:focus{
+  background-color: $accent-color;
+}
+  &__icon{
+  fill: #AFB1B8;
+  transition: fill 250ms $timing-function
+}
+  &__links:hover &__icon, &__links:focus &__icon    
+{
+  fill: #FFFFFF;
+}  
+}
+
+.clients{
+  display: flex;
+
+  &__item:not(:last-child){
+  margin-right: var$card-interval;
+}
+}
+
+.client{
+  &__link{
+  display: block;
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+  cursor: pointer;
+  background: #FFFFFF;
+  border-radius: 4px;
+  padding: 16px 31px;
+  transition: border-color 250ms $timing-function;
+}
+  &__link:hover &__icon, &__link:focus &__icon{
+  fill: $accent-color;
+}
+  &__link:hover, &__link:focus{
+  border-color: $accent-color;  
+}
+  &__icon{
+  fill: #AFB1B8;
+  transition: fill 250ms $timing-function;
+}
+  &__icon:hover, &__icon:focus{
+  fill: var(--accent-color);
+}
+}
+
+
