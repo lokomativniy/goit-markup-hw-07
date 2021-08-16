@@ -28,6 +28,7 @@
   color: $logo-color;
 }
 }
+
 .site-nav{
   &__navigation {
   display: flex;
@@ -102,6 +103,5 @@
   &__link:hover,&__link:focus{
   color: $accent-color;
 }
-
 }
 

@@ -28,7 +28,7 @@
   transition: fill 250ms $timing-function
 }
   &__btn-close:hover &__btn-icon, &__btn-close:hover &__btn-icon{
-  fill:var(--accent-color)
+  fill:$accent-color
 }
 }
 

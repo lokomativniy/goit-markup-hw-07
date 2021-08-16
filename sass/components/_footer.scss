@@ -32,26 +32,18 @@
 
 .social-box{
   margin-left: 70px;
-
-  &__title{
+}
+.subscribe-box{
+  margin-left: 93px;
+}
+.social-box__title,.subscribe-box__title{
   display: inline-block;
   font-weight: 700;
   line-height: 1.14;
   color:#ffffff;
   margin-bottom: 20px;
   }
-}
-.subscribe-box{
-  margin-left: 93px;
-
-  &__title{
-  display: inline-block;
-  font-weight: 700;
-  line-height: 1.14;
-  color:#ffffff;
-  margin-bottom: 20px;
-}
-}
+  
 .form-footer{
   display: flex;
 
