@@ -29,14 +29,17 @@
 }
 }
 
-.site-nav{
-  &__navigation {
+  .navigation{
   display: flex;
+     &__link:hover,&__link:focus{
+  fill:$accent-color;
+  color:$accent-color;
 }
-  &__item:not(:last-child) {
+}
+  .navigation__item:not(:last-child) {
   margin-right: 50px;
 }
-  &__link {
+  .navigation__link {
   color: $primary-text-color;
   text-decoration: none;
   display: block;
@@ -46,12 +49,13 @@
   line-height: 1.14;
   letter-spacing: 0.02em;
   transition: color 250ms $timing-function;
+ 
 }
-  &__link--current {
+  .navigation__link--current {
   color: $accent-color;
   position: relative;
 }
-  &__link--current::after{
+  .navigation__link--current::after{
   position: absolute;
   content: "";
   left: 0;
@@ -61,26 +65,29 @@
   background: $accent-color;
   border-radius: 2px;
 }
-  &__link:hover,&__link:focus{
-  fill:$accent-color;
-  color:$accent-color;
-}
-}
 
 .contacts {
   display: flex;
   align-items: center;
 
-  &:not(:last-child) {
+  &__link:hover &__icon, &__link:focus &__icon{
+  fill:$accent-color; color:$accent-color;
+}
+  &__link:hover,&__link:focus{
+  color: $accent-color;
+}
+}
+
+ .contacts:not(:last-child) {
   margin-right: 50px;
 }
-  &__item {
+  .contacts__item {
   display: flex
 }
-  &__item:not(:last-child){
+  .contacts__item:not(:last-child){
   margin-right: $card-interval;
 }
-  &__link{
+  .contacts__link{
   display: flex;
   color: $text-color;
   text-decoration: none;
@@ -90,18 +97,13 @@
   padding-top: 20px;
   padding-bottom: 20px;
   transition: color 250ms $timing-function;
+
 }
-  &__icon{
+  .contacts__icon{
   margin-right: 10px;
   fill: $text-color;
   transition: fill 250ms $timing-function;
 }
-  &__link:hover &__icon, &__link:focus &__icon{
-  fill:$accent-color;
-  color:$accent-color;
-}
-  &__link:hover,&__link:focus{
-  color: $accent-color;
-}
-}
+ 
+
 

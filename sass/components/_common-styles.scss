@@ -5,16 +5,17 @@
 }
 .section {
   padding: 94px 0;
-
-   &__title {
+}
+.section__title {
   font-size: 36px;
   font-weight: 700;
   line-height: 1.67;
   text-align: center;
   margin-bottom: 50px;
 }
-}
-.visually-hidden {
+
+.section__title--visually-hidden,
+.label__checkbox--visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -24,6 +25,7 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
 .btn {
   color: $primary-white-color;
   background: $accent-color;
@@ -47,10 +49,18 @@
   align-items: center;
   justify-content: center;
 
-  &__item:not(:last-child){
+  &__links:hover,&__links:focus{
+  background-color: $accent-color;
+}
+  &__links:hover &__icon, &__links:focus &__icon    
+{
+  fill: #FFFFFF;
+}  
+}
+.social__item:not(:last-child){
   margin-right: 10px;}
 
-  &__links{
+.social__links{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,15 +73,8 @@
   padding: 0;
   transition: background-color 250ms $timing-function;
 }
-  &__links:hover,&__links:focus{
-  background-color: $accent-color;
-}
-  &__icon{
+  .social__icon{
   fill: #AFB1B8;
   transition: fill 250ms $timing-function
 }
-  &__links:hover &__icon, &__links:focus &__icon    
-{
-  fill: #FFFFFF;
-}  
-}
+

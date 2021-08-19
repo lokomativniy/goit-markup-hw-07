@@ -8,8 +8,11 @@
   min-width: 528px;
   border-radius: 4px;
   background: #FFFFFF;
-
-  &__btn-close{
+   &__btn-close:hover &__btn-icon, &__btn-close:hover &__btn-icon{
+  fill:$accent-color
+}
+}
+.modal__btn-close{
   position: absolute;
   display: flex;
   justify-content: center;
@@ -23,15 +26,11 @@
   background: #FFFFFF;
   border-radius: 50%;
 }
-  &__btn-icon{
+.modal__btn-icon{
   fill:#000000;
   transition: fill 250ms $timing-function
 }
-  &__btn-close:hover &__btn-icon, &__btn-close:hover &__btn-icon{
-  fill:$accent-color
-}
-}
-
+ 
 .backdrop{
   position: fixed;
   top: 0;
@@ -48,6 +47,15 @@
 .form :nth-child(5){
   margin-bottom: 20px;
 }
+.form{
+    &__input:focus + &__icon{
+  fill:$accent-color;
+}
+  &__input:focus,&__textarea:focus{
+  border-color: $accent-color;
+  outline: none;
+}
+}
  .form__title{
   display: block;
   font-size: 20px;
@@ -55,11 +63,11 @@
   line-height: 1.15;
   margin-bottom: 12px;
 }
-.form-field{ 
+.form__field{ 
   position: relative;
   margin-bottom: 10px;
-   
-  &__label{
+}
+.form__label{
   display: block;
   text-align: left;
   margin-bottom: 4px;
@@ -68,7 +76,7 @@
   line-height: 1.17;
   letter-spacing: 0.01em; 
 }
-  &__input{
+.form__input{
   width: 100%;
   height: 40px;
   padding-left: 42px;
@@ -76,14 +84,7 @@
   border-radius: 4px; 
   transition: border-color 250ms $timing-function
 }
-  &__input:focus + &__icon{
-  fill:$accent-color;
-}
-  &__input:focus,&__textarea:focus{
-  border-color: $accent-color;
-  outline: none;
-}
-  &__icon{
+.form__icon{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -91,7 +92,7 @@
   fill: $primary-text-color;
   transition: fill 250ms $timing-function
 }
-  &__textarea{
+.form__textarea{
   width: 448px;
   height: 120px;
   resize: none;
@@ -99,14 +100,12 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   margin-bottom: 0px;
-  transition: border-color 250ms $timing-function
-}
+  transition: border-color 250ms $timing-function;
   &__textarea::placeholder,&__input::placeholder{
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 }
-
 .label{
   display: flex;
   align-items: center;
@@ -114,12 +113,12 @@
   color: $text-color;
   line-height: 1.7;
   margin-bottom: 30px;
-
-  &__link{
+}
+.label__link{
   color: $accent-color;
   margin-left: 0.5em;
 }
-  &__icon-check{
+.label__icon-check{
   display: inline-block;
   height: 15px;
   width: 16px;
@@ -128,14 +127,14 @@
   border: 2px solid #212121;
   background-color: #FFFFFF;
 }
-  &__checkbox:checked + &__icon-check{
+.label__checkbox:checked + .label__icon-check{
   border-color: $accent-color;
   background-color: $accent-color;
   background-image: url("../images/icon\ check\ \(1\)\ \(1\).svg");
   background-size: contain;
   background-origin: border-box;
 }
-}
+
 .btn-submit{
   padding: 10px 55px; 
 } 
